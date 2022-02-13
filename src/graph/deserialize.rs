@@ -2,7 +2,7 @@ use std::{borrow::Borrow, collections::HashMap, fmt::{Debug, Display}, error::Er
 
 use crate::{Graph};
 
-pub fn read_tgf<'input, It, S>(it: It) -> Result<Graph<String, String>, TGFParseError>
+pub fn read_tgf<It, S>(it: It) -> Result<Graph<String, String>, TGFParseError>
     where It: Iterator<Item = S>,
            S: Borrow<str>
 {
